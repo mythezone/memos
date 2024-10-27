@@ -1,0 +1,18 @@
+services:
+  memos:
+    image: neosmemo/memos:latest
+    container_name: memos
+    volumes:
+      - ~/.memos/:/var/opt/memos
+    ports:
+      - 5230:5230
+
+  pnpm:
+    image: neosmemo/pnpm:latest
+    container_name: pnpm
+    volumes:
+      - ./.pnpm/:/var/opt/pnpm
+    ports:
+      - 5231:5231
+
+  
